@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: noble-59min
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: EMAIL
+        sync: false
+      - key: PASSWORD
+        sync: false
