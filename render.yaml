@@ -3,8 +3,10 @@ services:
     name: noble-59min
     env: node
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: |
+      bash render-build.sh
+      npm install
+    startCommand: node index.js
     envVars:
       - key: EMAIL
         sync: false
